@@ -33,7 +33,7 @@ namespace Bitcoin_TCC.Models
                 {
                     try
                     {
-                        Buy_Value_API = xyz.SelectToken("$.ticker.high").ToString();
+                        Buy_Value_API = xyz.SelectToken("$.ticker.buy").ToString();
                     }
                     catch
                     {
