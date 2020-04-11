@@ -466,11 +466,11 @@ body {
 }
 .gtco-numbers-block h5 {
   font-family: "Lato-Bold";
-  font-size: 60px;
+  font-size: 52px;
 }
 @media (max-width: 1299px) {
   .gtco-numbers-block h5 {
-    font-size: 48px;
+    font-size: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -481,7 +481,7 @@ body {
 @media (max-width: 600px) {
   .gtco-numbers-block h5 {
     margin: 0;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 .gtco-numbers-block p {
