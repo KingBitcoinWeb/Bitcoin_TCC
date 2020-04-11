@@ -58,16 +58,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
+
+                    <input id="valorX" type="text" size="15" />
+                    <select id="operacao" onblur="opcao()">
+                        <option id="valor" value="1">Somar</option>
+                    </select>
+                    <input id="valorY" type="text" size="15" onblur="opcao()" />
+                    <b>=</b>
+                    <input id="resultado" type="text" size="15" disabled="true" />
+                    <input id="calcular" type="button" value="Calcular" onclick="opcao()" />
+
                     <h1>@Model.BuyValueMessage @Model.Buy_Value_API</h1>
+
                     <h2>
                         Venha junto aprender a
                         <span>Criptomoeda Bitcoin</span> e
                         e juntos fazer novos investimentos.
                     </h2>
-                        <p> Venha aprofundar seu conhecimento em Criptomoeda Bitcoin e realizar novos tipos investimentos alternativos do Brasil. </p>
+                    <p> Venha aprofundar seu conhecimento em Criptomoeda Bitcoin e realizar novos tipos investimentos alternativos do Brasil. </p>
 
-                        <a href="#">HOME<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-</div>
+                    <a href="#">HOME<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
 
                 <div class="col-md-6">
                     <div class="card"><img class="card-img-top img-fluid" src="images/banner-img.png" alt=""></div>
@@ -453,20 +464,7 @@
         </div>
     </div>
 
-    <!--
-    <div class="container-fluid gtco-logo-area">
-        <div class="container">
-            <div class="row">
-                <div class="col"><img src="images/logo1.png" class="img-fluid" alt=""></div>
-                <div class="col"><img src="images/logo2.png" class="img-fluid" alt=""></div>
-                <div class="col"><img src="images/logo3.png" class="img-fluid" alt=""></div>
-                <div class="col"><img src="images/logo4.png" class="img-fluid" alt=""></div>
-                <div class="col"><img src="images/logo5.png" class="img-fluid" alt=""></div>
-            </div>
-        </div>
-    </div>
-
-    -->
+ 
 
     <footer class="container-fluid" id="gtco-footer">
         <div class="container">
@@ -527,6 +525,24 @@
 
     </footer>
 
+    <script type="text/javascript">
+        function opcao() {
+
+            if (document.getElementById("operacao").value == "1") {
+                soma();
+            }
+        }
+
+        function soma() {
+            var valorX = document.getElementById("valorX").value;
+            var valorY = document.getElementById("valorY").value;
+            var resultado = parseInt(valorX) + parseInt(valorY);
+            document.getElementById("resultado").value = resultado;
+
+        }
+
+    </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.slim.min.js"></script>
@@ -537,9 +553,9 @@
     <script src="js/main.js"></script>
     <script src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
     <script>
-  var myLandbot = new LandbotLivechat({
-    index: 'https://landbot.io/u/H-275535-CO9WZYRFHJ6XGW9V/index.html',
-  });
+        var myLandbot = new LandbotLivechat({
+            index: 'https://landbot.io/u/H-275535-CO9WZYRFHJ6XGW9V/index.html',
+        });
     </script>
 </body>
 </html>
