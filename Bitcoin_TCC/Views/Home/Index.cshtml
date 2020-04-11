@@ -376,24 +376,27 @@
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">125</h5>
-                            <p class="card-text">Active Projects</p>
+                            <h5 class="card-title">@Model.Buy_Value_API</h5>
+                            <p class="card-text">Valor Bitcoin</p>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">200</h5>
-                            <p class="card-text">Business Growth</p>
+                            <p class="card-text">Qnt quer investir</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">530</h5>
-                            <p class="card-text">Completed Projects</p>
+                            <p class="card-text">Total de Bitcoin</p>
                         </div>
                     </div>
                 </div>
@@ -409,6 +412,7 @@
         </div>
     </div>
 
+    <!--
     <div class="container-fluid gtco-features-list">
         <div class="container">
             <div class="row">
@@ -464,7 +468,7 @@
         </div>
     </div>
 
- 
+-->
 
     <footer class="container-fluid" id="gtco-footer">
         <div class="container">
@@ -514,13 +518,13 @@
                             </ul>
                         </div>
                         -->
-                <div class="col-12">
-                    <p>&copy; 2020. King Bitcoin_Fabricio Pellisoli Beretta <a href="https://kingbitcoinweb.github.io/KingBitcoinWeb/KingBitcoinWeb/" target="_blank">KING BITCOIN</a>.</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
+    <div class="col-12">
+        <p>&copy; 2020. King Bitcoin_Fabricio Pellisoli Beretta <a href="https://kingbitcoinweb.github.io/KingBitcoinWeb/KingBitcoinWeb/" target="_blank">KING BITCOIN</a>.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
 
     </footer>
@@ -536,7 +540,7 @@
         function soma() {
             var valorX = document.getElementById("valorX").value;
             var valorY = document.getElementById("valorY").value;
-            var resultado = parseInt(valorX) + parseInt(valorY);
+            var resultado = parseFloat(valorX) + parseFloat(valorY);
             document.getElementById("resultado").value = resultado;
 
         }
