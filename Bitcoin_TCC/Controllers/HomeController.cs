@@ -18,7 +18,6 @@ namespace Bitcoin_TCC.Controllers
             {
                 BuyValueMessage = "O Valor atual do Bitcoin é: ",
                 Buy_Value_API = api.EnviaRequisicao_GET_()
-
             };
 
             return View(viewModel);

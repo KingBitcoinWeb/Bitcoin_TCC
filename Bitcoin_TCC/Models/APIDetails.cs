@@ -41,7 +41,7 @@ namespace Bitcoin_TCC.Models
                     }
                 }
 
-                Buy_Value_API = Buy_Value_API.Substring(0, 2) + "." + Buy_Value_API.Substring(2, 3) + "," + Buy_Value_API.Substring(6, 2);
+                Buy_Value_API = Buy_Value_API.Substring(0, 2) + "" + Buy_Value_API.Substring(2, 3) + "." + Buy_Value_API.Substring(6, 2);
 
                 streamDados.Close();
                 resposta.Close();

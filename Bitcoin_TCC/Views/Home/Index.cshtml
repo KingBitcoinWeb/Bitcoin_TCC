@@ -59,14 +59,15 @@
             <div class="row">
                 <div class="col-md-6">
 
-                    <input id="valorX" type="text" size="15" />
-                    <select id="operacao" onblur="opcao()">
-                        <option id="valor" value="1">Somar</option>
-                    </select>
-                    <input id="valorY" type="text" size="15" onblur="opcao()" />
-                    <b>=</b>
-                    <input id="resultado" type="text" size="15" disabled="true" />
-                    <input id="calcular" type="button" value="Calcular" onclick="opcao()" />
+
+                    @*<input id="valorX" type="text" size="15" />
+                        <select id="operacao" onblur="opcao()">
+                            <option id="valor" value="1">Somar</option>
+                        </select>
+                        <input id="valorY" type="text" size="15" onblur="opcao()" />
+                        <b>=</b>
+                        <input id="resultado" type="text" size="15" disabled="true" />
+                        <input id="calcular" type="button" value="Calcular" onclick="opcao()" />*@
 
                     <h1>@Model.BuyValueMessage @Model.Buy_Value_API</h1>
 
@@ -386,31 +387,38 @@
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">200</h5>
+                            <input type="text" name="box2" id="box2" class="add" value="0" onKeyUp="Calc('add')" onClick="this.focus();this.select();" />
                             <p class="card-text">Qnt quer investir</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">530</h5>
-                            <p class="card-text">Total de Bitcoin</p>
+                
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <form name="form0" id="form0">
+                                    <input readonly style="border:0px; font-size:14; color:red;" id="total" name="total">
+                                </form>
+                                    <p class="card-text">Total de Bitcoin</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">941</h5>
-                            <p class="card-text">Happy Clients</p>
+
+
+
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">941</h5>
+                                <p class="card-text">Happy Clients</p>
+                            </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
+
 
     <!--
         <div class="container-fluid gtco-features-list">
@@ -532,24 +540,49 @@
 
     </footer>
 
-    <script type="text/javascript">
-        function opcao() {
+    <script language="javascript">
+        function Calc(className) {
+            var elements = document.getElementsByClassName(className);
+            var total = 0;
 
-            if (document.getElementById("operacao").value == "1") {
-                soma();
+            for (var i = 0; i < elements.length; ++i) {
+                total += parseFloat(elements[i].value);
             }
+
+            //total = (((elements) * 1) / @Model.Buy_Value_API)
+            //document.form0.total.value = total;
+            document.form0.total.value = (((total) * 1) / @Model.Buy_Value_API);
         }
 
-        function soma() {
-            var valorX = document.getElementById("valorX").value;
-            var valorY = document.getElementById("valorY").value;
-            var resultado = parseFloat(valorX) + parseFloat(valorY);
-            document.getElementById("resultado").value = resultado;
-
+        function addone(field) {
+            field.value = Number(field.value) + 1;
         }
 
-
+        function subtractone(field) {
+            field.value = Number(field.value) - 1;
+        }
     </script>
+
+
+
+    @*<script type="text/javascript">
+            function opcao() {
+
+                if (document.getElementById("operacao").value == "1") {
+                    soma();
+                }
+            }
+
+            function soma() {
+                var valorX = document.getElementById("valorX").value;
+                var valorY = document.getElementById("valorY").value;
+                var resultado = parseFloat(valorX) + parseFloat(valorY);
+                document.getElementById("resultado").value = resultado;
+
+            }
+
+
+        </script>*@
 
     <!--  LANDBOT -- CHATBOT PRONTO
     <script SameSite="None; Secure" src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
