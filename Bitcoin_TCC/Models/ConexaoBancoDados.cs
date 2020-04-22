@@ -17,7 +17,7 @@ namespace Bitcoin_TCC.Models
                 builder.DataSource = "kingbitcoindb.database.windows.net";
                 builder.UserID = "kingbitcoinweb";
                 builder.Password = "BitcoinWeb@3000";
-                builder.InitialCatalog = "KingBitcoindb";
+                builder.InitialCatalog = "kingbitcoindb";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
