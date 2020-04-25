@@ -9,7 +9,9 @@ namespace Bitcoin_TCC.Models
 {
     public class ConexaoBancoDados
     {
+
         public static void Main(string[] args)
+
         {
             try
             {
