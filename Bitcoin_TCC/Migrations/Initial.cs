@@ -26,7 +26,7 @@ namespace Bitcoin_TCC.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Todo", x => x.ID);
+                    table.PrimaryKey("PK_contatoKB", x => x.ID);
                 });
         }
 
