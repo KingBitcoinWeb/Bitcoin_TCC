@@ -21,4 +21,6 @@ namespace Bitcoin_TCC
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
     }
+
+
 }
