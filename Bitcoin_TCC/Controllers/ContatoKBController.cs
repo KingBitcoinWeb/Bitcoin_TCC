@@ -19,7 +19,7 @@ namespace Bitcoin_TCC.Controllers
         }
 
         // GET: ContatoKB
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index2()
         {
             return View(await _context.ContatoKB.ToListAsync());
         }
@@ -59,7 +59,7 @@ namespace Bitcoin_TCC.Controllers
             {
                 _context.Add(contatoKB);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index2));
             }
             return View(contatoKB);
         }
@@ -110,7 +110,7 @@ namespace Bitcoin_TCC.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index2));
             }
             return View(contatoKB);
         }
@@ -141,7 +141,7 @@ namespace Bitcoin_TCC.Controllers
             var contatoKB = await _context.ContatoKB.FindAsync(id);
             _context.ContatoKB.Remove(contatoKB);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index2));
         }
 
         private bool ContatoKBExists(int id)
