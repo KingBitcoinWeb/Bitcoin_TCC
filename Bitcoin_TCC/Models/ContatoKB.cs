@@ -1,4 +1,6 @@
-﻿using System;
+﻿//https://github.com/Azure-Samples/dotnetcore-sqldb-tutorial
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,3 +16,5 @@ namespace Bitcoin_TCC.Models
 
     }
 }
+
+
