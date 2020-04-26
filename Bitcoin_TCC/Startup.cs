@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Bitcoin_TCC.Models;
 
 namespace Bitcoin_TCC
 {
@@ -33,6 +35,12 @@ namespace Bitcoin_TCC
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<Bitcoin_TCCContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Bitcoin_TCCContext")));
+
+            services.AddDbContext<Bitcoin_TCCContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Bitcoin_TCCContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
