@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\ConexaoBancoDados.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\Home\InvestimentosBit.cshtml" />
   </ItemGroup>
 

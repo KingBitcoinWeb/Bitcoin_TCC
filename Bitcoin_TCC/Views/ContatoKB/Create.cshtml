@@ -8,45 +8,61 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- awesone fonts css-->
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <!-- owl carousel css-->
+    <link rel="stylesheet" href="owl-carousel/assets/owl.carousel.min.css" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <title>KING BITCOIN</title>
+    <style>
+    </style>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
+        <div class="container">
+            <a class="navbar-brand">ENVIAR MENSAGEM</a>
+            </div>
+            <hr />
+</nav>
+        <footer class="container-fluid" id="gtco-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" id="contact" style="margin-top: 70px;">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-<h4>ContatoKB</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Mensagem" class="control-label"></label>
-                <input asp-for="Mensagem" class="form-control" />
-                <span asp-validation-for="Mensagem" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </form>
-    </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+                            <input asp-for="Nome" class="form-control " placeholder="Full Name" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+
+
+                            <input asp-for="Email" class="form-control" placeholder="Email Address" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+
+                            <input asp-for="Mensagem" class="form-control" placeholder="Message" />
+                            <span asp-validation-for="Mensagem" class="text-danger"></span>
+
+                            <div class="form-group">
+                                <input type="submit" value="Enviar" class="btn btn-default" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
 </body>
 </html>
