@@ -1,9 +1,5 @@
 ﻿@model Bitcoin_TCC.Models.ContatoKB
 
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 
 <html>
@@ -29,40 +25,43 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
         <div class="container">
-            <a class="navbar-brand">ENVIAR MENSAGEM</a>
-            </div>
-            <hr />
-</nav>
-        <footer class="container-fluid" id="gtco-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6" id="contact" style="margin-top: 70px;">
-                        <form asp-action="Create">
-                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <a class="navbar-brand"> ENVIAR MENSAGEM </a>
+
+        </div>
+        <hr />
+    </nav>
+    <footer class="container-fluid" id="gtco-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" id="contact">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 
-                            <input asp-for="Nome" class="form-control " placeholder="Full Name" />
-                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        <input asp-for="Nome" class="form-control " placeholder="Full Name" style="margin-top: 10px" ; />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
 
 
 
-                            <input asp-for="Email" class="form-control" placeholder="Email Address" />
-                            <span asp-validation-for="Email" class="text-danger"></span>
+                        <input asp-for="Email" class="form-control" placeholder="Email Address" style="margin-top: 10px" ; />
+                        <span asp-validation-for="Email" class="text-danger"></span>
 
-                            <input asp-for="Mensagem" class="form-control" placeholder="Message" />
-                            <span asp-validation-for="Mensagem" class="text-danger"></span>
+                        <textarea asp-for="Mensagem" class="form-control" placeholder="Message" style=" min-height: 200px; margin-top: 10px"> </textarea>
+                        <span asp-validation-for="Mensagem" class="text-danger"></span>
 
-                            <div class="form-group">
-                                <input type="submit" value="Enviar" class="btn btn-default" />
-                            </div>
-                        </form>
-                    </div>
+                        <div class="form-group">
+                            <input type="submit" value="Enviar" class="btn btn-default" style="margin-top: 20px;" />
+                        </div>
+                    </form>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        @section Scripts {
-            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-        }
+    <a href="https://bitcoinking.azurewebsites.net/" class="submit-button"> VOLTAR <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
 </body>
 </html>
