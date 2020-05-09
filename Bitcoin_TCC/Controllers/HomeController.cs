@@ -42,6 +42,16 @@ namespace Bitcoin_TCC.Controllers
             return View();
         }
 
+        public IActionResult Investimentos()
+        {
+            return View();
+        }
+
+        public IActionResult ComoComprarBitcoin()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

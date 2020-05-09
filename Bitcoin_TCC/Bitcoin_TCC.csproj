@@ -7,14 +7,11 @@
 
   <ItemGroup>
     <Compile Remove="Models\ConexaoBancoDados.cs" />
+    <Compile Remove="Views\Home\ValuesController.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Home\InvestimentosBit.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Home\InvestimentosBit.cshtml" />
+    <None Remove="Views\Home\htmlpage.html" />
   </ItemGroup>
 
   <ItemGroup>
