@@ -59,7 +59,7 @@ namespace Bitcoin_TCC.Controllers
             {
                 _context.Add(contatoKB);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index2));
+                return RedirectToAction(nameof(Create));
             }
             return View(contatoKB);
         }
