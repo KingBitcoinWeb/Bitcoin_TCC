@@ -134,7 +134,8 @@
                         <!--inputCurrency form-control-->
                         <input class="add" type="text" name="box2" id="box2" value="0" onKeyUp="Calc('add')" onClick="this.focus();this.select();" />
                     </div>
-                    <small id="coinyep-reverse1">1 BRL = (@Model.Buy_Value_API/1) </small> <small id="price-variation1"></small>
+                    <small id="coinyep-reverse1" ></small> 
+                    <small id="price-variation1"></small>
                 </div>
 
 
@@ -155,143 +156,6 @@
 
             </div>
         </div>
-
-        @*<div class="container-fluid gtco-features" id="comocomprar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <h2> COMO COMPRAR BITCOINS<br /></h2>
-                        <p>
-                            O processo de comprar a Bitcoin é muito simples, no site da Mercado Bitcoin, possui três passos muitos simples para realização da compra da Criptomoeda.
-                            Para abertura da conta será realizado no Site do Mercado Bitcoins. Neste site irá solicitar alguns dados para realizar a abertura da conta.
-                        </p>
-                        <video width="320" height="240" controls>
-                            <source src="videos/video_bitcoin.mp4" type="video/mp4">
-                        </video>
-
-
-                        <a href="#">HOME<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>
-
-
-                    <div class="col-lg-8">
-                        <svg id="bg-services"
-                             width="100%"
-                             viewBox="0 0 1000 800">
-                            <defs>
-                                <linearGradient id="PSgrad_02" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
-                                    <stop offset="0%" stop-color="rgb(1,230,248)" stop-opacity="1" />
-                                    <stop offset="100%" stop-color="rgb(29,62,222)" stop-opacity="1" />
-                                </linearGradient>
-                            </defs>
-                            <path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_02)"
-                                  d="M801.878,3.146 L116.381,128.537 C26.052,145.060 -21.235,229.535 9.856,312.073 L159.806,710.157 C184.515,775.753 264.901,810.334 338.020,792.380 L907.021,652.668 C972.912,636.489 1019.383,573.766 1011.301,510.470 L962.013,124.412 C951.950,45.594 881.254,-11.373 801.878,3.146 Z" />
-                        </svg>
-
-
-                        <div class="row">
-                            <div class="col">
-                                <div class="card text-center">
-                                    <h3 class="card-title">1° Passo</h3>
-                                    <a href="https://conta.mercadobitcoin.com.br/cadastro/">
-                                        <div class="oval"><img class="card-img-top" src="images/web-design.png" alt="">
-
-                                    </a>
-                                </div>
-
-                                <div class="card-body">
-                                    <h3 class="card-title">Abrir uma conta</h3>
-                                    <p class="card-text">Clique no PC para abertura da conta.</p>
-                                </div>
-                            </div>
-                            <div class="card text-center">
-                                <h3 class="card-title">2° Passo</h3>
-                                <div class="oval"><img class="card-img-top" src="images/marketing.png" alt=""></div>
-
-                                <div class="card-body">
-                                    <h3 class="card-title">Adicione saldo para negociar</h3>
-                                    <p class="card-text">Faça uma TED ou DOC de qualquer banco e adicione saldo a sua conta.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col" style="top: 350px">
-                            <div class="card text-center">
-                                <h3 class="card-title">3° Passo</h3>
-                                <div class="oval"><img class="card-img-top" src="images/seo.png" alt=""></div>
-                                <div class="card-body">
-                                    <h3 class="card-title">Compre o ativo desejado</h3>
-                                    <p class="card-text">Escolha entre nossas opções de criptomoedas ou tokens de ativos reais.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid gtco-news">
-        <div class="container">
-            <h2>INVESTIMENTO EM BITCOIN</h2>
-
-            <p style="display: flex;align-items: center;justify-content: center;">
-                Os investimento podem ser realizado no Site abaixo, visto que nessa plataforma consta os valores a serem investido e o seu retorno.
-            </p>
-
-
-            <div class="owl-carousel owl-carousel2 owl-theme">
-                <div>
-                    <div class="card text-center">
-                        <img class="card-img-top" src="images/5_InvestimentoBitcoin.png" alt="">
-                        <div class="card-body text-left pr-0 pl-0">
-                            <h5>5% AO DIA POR 300 DIAS ÚTEIS</h5>
-                            <p class="card-text">Ao realizar investimento de R$ 1.000,00 a R$ 9.999,00 poderá ter rendimento de 5% ao dia do valor investido.</p>
-                            <a href="https://investimentobitcoin.com/">APLICAR<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card text-center">
-                        <img class="card-img-top" src="images/6_InvestimentoBitcoin.png" alt="">
-                        <div class="card-body text-left pr-0 pl-0">
-                            <h5>6% AO DIA POR 300 DIAS ÚTEIS</h5>
-                            <p class="card-text">Ao realizar investimento de R$ 10.000,00 a R$ 49.999,00 poderá ter rendimento de 6% ao dia do valor investido.</p>
-                            <a href="https://investimentobitcoin.com/">APLICAR<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card text-center">
-                        <img class="card-img-top" src="images/7_InvestimentoBitcoin.png" alt="">
-                        <div class="card-body text-left pr-0 pl-0">
-                            <h5>7% AO DIA POR 300 DIAS ÚTEIS</h5>
-                            <p class="card-text">Ao realizar investimento de R$ 50.000,00 a R$ 499.999,00 poderá ter rendimento de 7% ao dia do valor investido.</p>
-                            <a href="https://investimentobitcoin.com/">APLICAR<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>*@
-
-    @*<footer class="container-fluid" id="gtco-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6" id="contact" style="margin-top: 70px;">
-                    <h4> Contatos </h4>
-                    <input type="text" class="form-control" placeholder="Full Name">
-                    <input type="email" class="form-control" placeholder="Email Address">
-                    <textarea class="form-control" placeholder="Message"></textarea>
-                    <a href="#" class="submit-button">HOME<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                </div>
-
-            </div>
-        </div>
-    </footer>*@
 
     <script language="javascript">
         function Calc(className) {
